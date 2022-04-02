@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/maveonair/Code/github.com/maveonair/Combiner/AudioMerge.xcodeproj">
+      location = "self:/Users/maveonair/Code/github.com/maveonair/AudioMerge/AudioMerge.xcodeproj">
    </FileRef>
 </Workspace>

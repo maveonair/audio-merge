@@ -26,14 +26,14 @@
 			containerPortal = F147CE4C27DF7EEC0030C005 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F147CE5327DF7EEC0030C005;
-			remoteInfo = Combiner;
+			remoteInfo = AudioMerge;
 		};
 		F147CE7027DF7EED0030C005 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F147CE4C27DF7EEC0030C005 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F147CE5327DF7EEC0030C005;
-			remoteInfo = Combiner;
+			remoteInfo = AudioMerge;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -191,7 +191,7 @@
 			dependencies = (
 			);
 			name = AudioMerge;
-			productName = Combiner;
+			productName = AudioMerge;
 			productReference = F147CE5427DF7EEC0030C005 /* AudioMerge.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -209,7 +209,7 @@
 				F147CE6727DF7EED0030C005 /* PBXTargetDependency */,
 			);
 			name = AudioMergeTests;
-			productName = CombinerTests;
+			productName = AudioMergeTests;
 			productReference = F147CE6527DF7EED0030C005 /* AudioMergeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -227,7 +227,7 @@
 				F147CE7127DF7EED0030C005 /* PBXTargetDependency */,
 			);
 			name = AudioMergeUITests;
-			productName = CombinerUITests;
+			productName = AudioMergeUITests;
 			productReference = F147CE6F27DF7EED0030C005 /* AudioMergeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -533,7 +533,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMergeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -552,7 +552,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMergeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -569,11 +569,11 @@
 				DEVELOPMENT_TEAM = JFEQBT86F4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMergeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Combiner;
+				TEST_TARGET_NAME = AudioMerge;
 			};
 			name = Debug;
 		};
@@ -586,11 +586,11 @@
 				DEVELOPMENT_TEAM = JFEQBT86F4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMergeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Combiner;
+				TEST_TARGET_NAME = AudioMerge;
 			};
 			name = Release;
 		};

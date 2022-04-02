@@ -20,7 +20,7 @@ struct ContentView: View {
     private var hasFiles: Bool {
         return !self.audioFiles.isEmpty
     }
-
+    
     var body: some View {
         Group {
             if (self.hasFiles) {
@@ -40,8 +40,8 @@ struct ContentView: View {
             Button(action: removeAllFiles) {
                 Label("Clear all audio files", systemImage: "trash")
             }.opacity(self.hasFiles ? 1.0 : 0.0)
-             .disabled(self.isProcessing)
-
+                .disabled(self.isProcessing)
+            
             Button(action: addFiles) {
                 Label("Add audio files", systemImage: "doc.badge.plus")
             }.disabled(self.isProcessing)
@@ -98,7 +98,7 @@ struct ContentView: View {
                         self.mergeError = error
                         self.showAlert = true
                     }
-             })
+                })
             }
         }
     }
