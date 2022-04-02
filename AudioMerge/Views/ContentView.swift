@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var audioFiles: [AudioFile] = []
     
     @State private var isProcessing = false
-    @State private var progress = 0.0
     
     @State private var showAlert = false
     @State private var mergeError: MergeError?
