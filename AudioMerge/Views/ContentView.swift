@@ -77,7 +77,7 @@ struct ContentView: View {
     
     private func startMerging() {
         let panel = NSSavePanel()
-        panel.allowedContentTypes = [UTType.mpeg4Audio]
+        panel.allowedContentTypes = [UTType.audio]
         panel.canCreateDirectories = true
         panel.isExtensionHidden = false
         panel.allowsOtherFileTypes = false
@@ -85,6 +85,7 @@ struct ContentView: View {
         panel.title = "Save new audio file"
         panel.message = "Choose a folder and a name to store the merged audio file."
         panel.nameFieldLabel = "File name:"
+        panel.nameFieldStringValue = "Untitled.m4a"
         
         if panel.runModal() == .OK {
             if let outputURL = panel.url {
