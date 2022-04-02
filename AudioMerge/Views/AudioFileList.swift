@@ -19,3 +19,10 @@ struct AudioFileList: View {
         }
     }
 }
+
+
+struct AudioFileList_Previews: PreviewProvider {
+    static var previews: some View {
+        AudioFileList()
+    }
+}
