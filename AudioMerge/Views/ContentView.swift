@@ -27,7 +27,7 @@ struct ContentView: View {
                 
                 if (self.isProcessing) {
                     ProgressView("Merge audio files…")
-                        .progressViewStyle(LinearProgressViewStyle())
+                        .progressViewStyle(.linear)
                         .padding()
                 }
                 
