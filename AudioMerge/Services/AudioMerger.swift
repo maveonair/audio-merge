@@ -33,7 +33,7 @@ func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler:
         return
     }
 
-    assetExport.outputFileType = AVFileType.m4a
+    assetExport.outputFileType = .m4a
     assetExport.outputURL = outputURL
     
     assetExport.exportAsynchronously {
@@ -59,10 +59,10 @@ private func createComposition(audioFiles: [AudioFile]) -> AVMutableComposition?
     let composition = AVMutableComposition()
     
     for audioFile in audioFiles {
-        let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: CMPersistentTrackID())!
+        let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: CMPersistentTrackID())!
         let asset = audioFile.asset
 
-        let trackContainer = asset.tracks(withMediaType: AVMediaType.audio)
+        let trackContainer = asset.tracks(withMediaType: .audio)
         guard trackContainer.count > 0 else {
             print("AUDIO_MERGE -> nothing to do...")
             return nil
