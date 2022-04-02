@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F109AEA927F89D6700887DA9 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109AEA827F89D6700887DA9 /* CMTime.swift */; };
+		F1193CEF27F88A3300EA6A33 /* AudioFileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1193CEE27F88A3300EA6A33 /* AudioFileList.swift */; };
+		F1193CF227F88D3700EA6A33 /* AudioMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1193CF127F88D3700EA6A33 /* AudioMerger.swift */; };
+		F147CE5827DF7EEC0030C005 /* AudioMergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147CE5727DF7EEC0030C005 /* AudioMergeApp.swift */; };
+		F147CE5A27DF7EEC0030C005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147CE5927DF7EEC0030C005 /* ContentView.swift */; };
+		F147CE5C27DF7EED0030C005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F147CE5B27DF7EED0030C005 /* Assets.xcassets */; };
+		F147CE5F27DF7EED0030C005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F147CE5E27DF7EED0030C005 /* Preview Assets.xcassets */; };
+		F147CE6A27DF7EED0030C005 /* AudioMergeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147CE6927DF7EED0030C005 /* AudioMergeTests.swift */; };
+		F147CE7427DF7EED0030C005 /* AudioMergeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147CE7327DF7EED0030C005 /* AudioMergeUITests.swift */; };
+		F147CE7627DF7EED0030C005 /* AudioMergeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147CE7527DF7EED0030C005 /* AudioMergeUITestsLaunchTests.swift */; };
+		F1E18E5327EF550D00363B4E /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E18E5227EF550D00363B4E /* AudioFile.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F147CE6627DF7EED0030C005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F147CE4C27DF7EEC0030C005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F147CE5327DF7EEC0030C005;
+			remoteInfo = Combiner;
+		};
+		F147CE7027DF7EED0030C005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F147CE4C27DF7EEC0030C005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F147CE5327DF7EEC0030C005;
+			remoteInfo = Combiner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F109AEA827F89D6700887DA9 /* CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
+		F1193CEE27F88A3300EA6A33 /* AudioFileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileList.swift; sourceTree = "<group>"; };
+		F1193CF127F88D3700EA6A33 /* AudioMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMerger.swift; sourceTree = "<group>"; };
+		F147CE5427DF7EEC0030C005 /* AudioMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147CE5727DF7EEC0030C005 /* AudioMergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMergeApp.swift; sourceTree = "<group>"; };
+		F147CE5927DF7EEC0030C005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F147CE5B27DF7EED0030C005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F147CE5E27DF7EED0030C005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F147CE6027DF7EED0030C005 /* AudioMerge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioMerge.entitlements; sourceTree = "<group>"; };
+		F147CE6527DF7EED0030C005 /* AudioMergeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioMergeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147CE6927DF7EED0030C005 /* AudioMergeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMergeTests.swift; sourceTree = "<group>"; };
+		F147CE6F27DF7EED0030C005 /* AudioMergeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioMergeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147CE7327DF7EED0030C005 /* AudioMergeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMergeUITests.swift; sourceTree = "<group>"; };
+		F147CE7527DF7EED0030C005 /* AudioMergeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMergeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F149C64027F2271300315B0C /* AudioMergeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioMergeRelease.entitlements; sourceTree = "<group>"; };
+		F1E18E5227EF550D00363B4E /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F147CE5127DF7EEC0030C005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6227DF7EED0030C005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6C27DF7EED0030C005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F109AEA727F89D5E00887DA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F109AEA827F89D6700887DA9 /* CMTime.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1193CF027F88D2C00EA6A33 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1193CF127F88D3700EA6A33 /* AudioMerger.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F147CE4B27DF7EEC0030C005 = {
+			isa = PBXGroup;
+			children = (
+				F147CE5627DF7EEC0030C005 /* AudioMerge */,
+				F147CE6827DF7EED0030C005 /* AudioMergeTests */,
+				F147CE7227DF7EED0030C005 /* AudioMergeUITests */,
+				F147CE5527DF7EEC0030C005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F147CE5527DF7EEC0030C005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F147CE5427DF7EEC0030C005 /* AudioMerge.app */,
+				F147CE6527DF7EED0030C005 /* AudioMergeTests.xctest */,
+				F147CE6F27DF7EED0030C005 /* AudioMergeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F147CE5627DF7EEC0030C005 /* AudioMerge */ = {
+			isa = PBXGroup;
+			children = (
+				F109AEA727F89D5E00887DA9 /* Extensions */,
+				F1193CF027F88D2C00EA6A33 /* Services */,
+				F149C64027F2271300315B0C /* AudioMergeRelease.entitlements */,
+				F1E18E5127EF54FC00363B4E /* Views */,
+				F1E18E5027EF54F700363B4E /* Models */,
+				F147CE5727DF7EEC0030C005 /* AudioMergeApp.swift */,
+				F147CE5B27DF7EED0030C005 /* Assets.xcassets */,
+				F147CE6027DF7EED0030C005 /* AudioMerge.entitlements */,
+				F147CE5D27DF7EED0030C005 /* Preview Content */,
+			);
+			path = AudioMerge;
+			sourceTree = "<group>";
+		};
+		F147CE5D27DF7EED0030C005 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F147CE5E27DF7EED0030C005 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F147CE6827DF7EED0030C005 /* AudioMergeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F147CE6927DF7EED0030C005 /* AudioMergeTests.swift */,
+			);
+			path = AudioMergeTests;
+			sourceTree = "<group>";
+		};
+		F147CE7227DF7EED0030C005 /* AudioMergeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F147CE7327DF7EED0030C005 /* AudioMergeUITests.swift */,
+				F147CE7527DF7EED0030C005 /* AudioMergeUITestsLaunchTests.swift */,
+			);
+			path = AudioMergeUITests;
+			sourceTree = "<group>";
+		};
+		F1E18E5027EF54F700363B4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1E18E5227EF550D00363B4E /* AudioFile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1E18E5127EF54FC00363B4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F147CE5927DF7EEC0030C005 /* ContentView.swift */,
+				F1193CEE27F88A3300EA6A33 /* AudioFileList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F147CE5327DF7EEC0030C005 /* AudioMerge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147CE7927DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMerge" */;
+			buildPhases = (
+				F147CE5027DF7EEC0030C005 /* Sources */,
+				F147CE5127DF7EEC0030C005 /* Frameworks */,
+				F147CE5227DF7EEC0030C005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioMerge;
+			productName = Combiner;
+			productReference = F147CE5427DF7EEC0030C005 /* AudioMerge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F147CE6427DF7EED0030C005 /* AudioMergeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147CE7C27DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMergeTests" */;
+			buildPhases = (
+				F147CE6127DF7EED0030C005 /* Sources */,
+				F147CE6227DF7EED0030C005 /* Frameworks */,
+				F147CE6327DF7EED0030C005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F147CE6727DF7EED0030C005 /* PBXTargetDependency */,
+			);
+			name = AudioMergeTests;
+			productName = CombinerTests;
+			productReference = F147CE6527DF7EED0030C005 /* AudioMergeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F147CE6E27DF7EED0030C005 /* AudioMergeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147CE7F27DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMergeUITests" */;
+			buildPhases = (
+				F147CE6B27DF7EED0030C005 /* Sources */,
+				F147CE6C27DF7EED0030C005 /* Frameworks */,
+				F147CE6D27DF7EED0030C005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F147CE7127DF7EED0030C005 /* PBXTargetDependency */,
+			);
+			name = AudioMergeUITests;
+			productName = CombinerUITests;
+			productReference = F147CE6F27DF7EED0030C005 /* AudioMergeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F147CE4C27DF7EEC0030C005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F147CE5327DF7EEC0030C005 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F147CE6427DF7EED0030C005 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F147CE5327DF7EEC0030C005;
+					};
+					F147CE6E27DF7EED0030C005 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F147CE5327DF7EEC0030C005;
+					};
+				};
+			};
+			buildConfigurationList = F147CE4F27DF7EEC0030C005 /* Build configuration list for PBXProject "AudioMerge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F147CE4B27DF7EEC0030C005;
+			productRefGroup = F147CE5527DF7EEC0030C005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F147CE5327DF7EEC0030C005 /* AudioMerge */,
+				F147CE6427DF7EED0030C005 /* AudioMergeTests */,
+				F147CE6E27DF7EED0030C005 /* AudioMergeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F147CE5227DF7EEC0030C005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147CE5F27DF7EED0030C005 /* Preview Assets.xcassets in Resources */,
+				F147CE5C27DF7EED0030C005 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6327DF7EED0030C005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6D27DF7EED0030C005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F147CE5027DF7EEC0030C005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E18E5327EF550D00363B4E /* AudioFile.swift in Sources */,
+				F1193CEF27F88A3300EA6A33 /* AudioFileList.swift in Sources */,
+				F1193CF227F88D3700EA6A33 /* AudioMerger.swift in Sources */,
+				F147CE5A27DF7EEC0030C005 /* ContentView.swift in Sources */,
+				F109AEA927F89D6700887DA9 /* CMTime.swift in Sources */,
+				F147CE5827DF7EEC0030C005 /* AudioMergeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6127DF7EED0030C005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147CE6A27DF7EED0030C005 /* AudioMergeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147CE6B27DF7EED0030C005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147CE7627DF7EED0030C005 /* AudioMergeUITestsLaunchTests.swift in Sources */,
+				F147CE7427DF7EED0030C005 /* AudioMergeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F147CE6727DF7EED0030C005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F147CE5327DF7EEC0030C005 /* AudioMerge */;
+			targetProxy = F147CE6627DF7EED0030C005 /* PBXContainerItemProxy */;
+		};
+		F147CE7127DF7EED0030C005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F147CE5327DF7EEC0030C005 /* AudioMerge */;
+			targetProxy = F147CE7027DF7EED0030C005 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F147CE7727DF7EED0030C005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F147CE7827DF7EED0030C005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F147CE7A27DF7EED0030C005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = AudioMerge/AudioMerge.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioMerge/Preview Content\"";
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMerge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F147CE7B27DF7EED0030C005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = AudioMerge/AudioMergeRelease.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioMerge/Preview Content\"";
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.AudioMerge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F147CE7D27DF7EED0030C005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioMerge.app/Contents/MacOS/AudioMerge";
+			};
+			name = Debug;
+		};
+		F147CE7E27DF7EED0030C005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioMerge.app/Contents/MacOS/AudioMerge";
+			};
+			name = Release;
+		};
+		F147CE8027DF7EED0030C005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Combiner;
+			};
+			name = Debug;
+		};
+		F147CE8127DF7EED0030C005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JFEQBT86F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.mettler.CombinerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Combiner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F147CE4F27DF7EEC0030C005 /* Build configuration list for PBXProject "AudioMerge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147CE7727DF7EED0030C005 /* Debug */,
+				F147CE7827DF7EED0030C005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147CE7927DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMerge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147CE7A27DF7EED0030C005 /* Debug */,
+				F147CE7B27DF7EED0030C005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147CE7C27DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMergeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147CE7D27DF7EED0030C005 /* Debug */,
+				F147CE7E27DF7EED0030C005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147CE7F27DF7EED0030C005 /* Build configuration list for PBXNativeTarget "AudioMergeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147CE8027DF7EED0030C005 /* Debug */,
+				F147CE8127DF7EED0030C005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F147CE4C27DF7EEC0030C005 /* Project object */;
+}
