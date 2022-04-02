@@ -90,12 +90,15 @@ struct ContentView: View {
             if let outputURL = panel.url {
                 self.isProcessing = true
                 
-                mergeAudioFiles(audioFiles: self.audioFiles, outputURL: outputURL, completionHandler: { error in
+                mergeAudioFiles(audioFiles: self.audioFiles, outputURL: outputURL, completionHandler: { status in
                     self.isProcessing = false
-                    
-                    if let error = error {
+                     
+                    switch status {
+                    case let .failed(error):
                         self.mergeError = error
                         self.showAlert = true
+                    default:
+                        self.mergeError = nil
                     }
                 })
             }

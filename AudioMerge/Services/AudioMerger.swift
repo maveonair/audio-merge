@@ -7,24 +7,65 @@
 
 import Foundation
 import AVKit
+import SwiftUI
 
 struct MergeError: Error {
     let description: String
 }
 
-func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler: @escaping (MergeError?) -> Void) {
+struct AudioMerger {
+    enum Status {
+        case failed(MergeError)
+        case done
+    }
+}
+
+func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler: @escaping (AudioMerger.Status?) -> Void) {
+    guard let composition = createComposition(audioFiles: audioFiles) else {
+        completionHandler(.failed(MergeError(description: "Could not create composition")))
+        return
+    }
+
+    guard let assetExport = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetAppleM4A) else {
+        let errorMessage = "Could not create AVAssetExportSession"
+        print("AVASSET_EXPORT -> failed \(errorMessage)")
+        completionHandler(.failed(MergeError(description: "Merge process could not be started.")))
+        return
+    }
+
+    assetExport.outputFileType = AVFileType.m4a
+    assetExport.outputURL = outputURL
+    
+    assetExport.exportAsynchronously {
+        switch assetExport.status
+        {
+        case .failed:
+            print("AUDIO_MERGE -> failed \(String(describing: assetExport.error!))")
+
+            if let error = assetExport.error as? NSError, let message = error.localizedRecoverySuggestion {
+                completionHandler(.failed(MergeError(description: message)))
+            } else {
+                completionHandler(.failed(MergeError(description: assetExport.error!.localizedDescription)))
+            }
+        default:
+            print("Audio Concatenation Complete")
+            completionHandler(.done)
+        }
+    }
+
+}
+
+private func createComposition(audioFiles: [AudioFile]) -> AVMutableComposition? {
     let composition = AVMutableComposition()
-
-    for i in 0 ..< audioFiles.count {
+    
+    for audioFile in audioFiles {
         let compositionAudioTrack :AVMutableCompositionTrack = composition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: CMPersistentTrackID())!
-
-        let asset = audioFiles[i].asset
+        let asset = audioFile.asset
 
         let trackContainer = asset.tracks(withMediaType: AVMediaType.audio)
         guard trackContainer.count > 0 else {
             print("AUDIO_MERGE -> nothing to do...")
-            completionHandler(nil)
-            return
+            return nil
         }
 
         let audioTrack = trackContainer[0]
@@ -33,39 +74,5 @@ func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler:
         try! compositionAudioTrack.insertTimeRange(timeRange, of: audioTrack, at: composition.duration)
     }
 
-    let assetExport = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetAppleM4A)
-
-    if assetExport != nil {
-        assetExport!.outputFileType = AVFileType.m4a
-        assetExport!.outputURL = outputURL
-
-        assetExport!.exportAsynchronously {
-            switch assetExport!.status
-            {
-            case AVAssetExportSession.Status.failed:
-                print("AUDIO_MERGE -> failed \(String(describing: assetExport!.error!))")
-
-                if let error = assetExport!.error as? NSError, let message = error.localizedRecoverySuggestion {
-                    completionHandler(MergeError(description: message))
-                } else {
-                    completionHandler(MergeError(description: assetExport!.error!.localizedDescription))
-                }
-            case AVAssetExportSession.Status.cancelled:
-                print("AUDIO_MERGE -> cancelled \(String(describing: assetExport!.error))")
-            case AVAssetExportSession.Status.unknown:
-                print("AUDIO_MERGE -> unknown\(String(describing: assetExport!.error))")
-            case AVAssetExportSession.Status.waiting:
-                print("AUDIO_MERGE -> waiting\(String(describing: assetExport!.error))")
-            case AVAssetExportSession.Status.exporting:
-                print("AUDIO_MERGE -> exporting\(String(describing: assetExport!.error) )")
-            default:
-                print("Audio Concatenation Complete")
-                completionHandler(nil)
-            }
-        }
-    } else {
-        let errorMessage = "Could not create AVAssetExportSession"
-        print("AVASSET_EXPORT -> failed \(errorMessage)")
-        completionHandler(MergeError(description: "Merge process could not be started."))
-    }
+    return composition
 }
