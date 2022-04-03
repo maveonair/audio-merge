@@ -28,7 +28,7 @@ func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler:
 
     guard let assetExport = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetAppleM4A) else {
         let errorMessage = "Could not create AVAssetExportSession"
-        print("AVASSET_EXPORT -> failed \(errorMessage)")
+        print("AUDIO_MERGE -> failed \(errorMessage)")
         completionHandler(.failed(MergeError(description: "Merge process could not be started.")))
         return
     }
@@ -48,7 +48,7 @@ func mergeAudioFiles(audioFiles: [AudioFile], outputURL: URL, completionHandler:
                 completionHandler(.failed(MergeError(description: assetExport.error!.localizedDescription)))
             }
         default:
-            print("Audio Concatenation Complete")
+            print("AUDIO_MERGE -> complete")
             completionHandler(.done)
         }
     }
@@ -64,7 +64,7 @@ private func createComposition(audioFiles: [AudioFile]) -> AVMutableComposition?
 
         let trackContainer = asset.tracks(withMediaType: .audio)
         guard trackContainer.count > 0 else {
-            print("AUDIO_MERGE -> nothing to do...")
+            print("AUDIO_MERGE -> skip asset with empty tracks")
             return nil
         }
 
